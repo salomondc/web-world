@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  font-family: "Poppins";
+  height: 100%;
+  color: white;
+}
+html {
+  height: 100%;
+}
+
+#vid {
+  background-image: url("./media/eyeblur.png");
+  background-position: 0px -31px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.dimm {
+  position: fixed;  
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: #2222331a;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 50rem;
+  height: 100%;
+}
+
+.logo_ctr {
+  position: relative;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  justify-self: flex-end;
+  bottom: 1rem;
+}
+
+.socials > li {
+  margin: 0 .5rem;
+}
+
+.socials > li > a {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-radius: 10px;
+  transition: .3s;
+
+}
+
+.socials > li > a > img {  
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 20px;
+  width: 20px;
+}
+
+.socials > li a:hover {
+  border: 3px solid transparent;
+  background-color: white;
+}
+
+.socials > li a:hover img{
+  filter: brightness(.2);
+}
+
+#logo_sub {
+  font-weight: 300;
+  text-align: center;
+}
+#logo {
+  max-width: 40vw;
+}
+
+
+.sites_ctr {
+  box-sizing: border-box;
+  width: 50%;
+  background-color:#9B172CAA;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+
+  background-image: url("./media/circuits.svg");
+
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: 26vw 250px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sites_ctr .header {
+  position: absolute;
+  top: 5rem;
+}
+
+.header p{
+  position: relative;
+  margin: 0;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  max-width: 35rem;
+  text-align: center;
+  padding-left: 2vw;
+}
+
+.sites_ctr h1 {
+  font-size: 3rem;
+  margin: auto;
+}
+
+.sites {
+  margin-top: 12rem;
+  width: 100%;
+}
+
+.sites li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.sites a {
+  box-sizing: border-box;
+  border-left: 13vw solid transparent;
+  min-width: 100%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+}
+
+.sites li:before {
+  content: '' ;
+  position: absolute;
+  margin: auto;
+  width: 30rem;
+  height: 7rem;
+  box-shadow: 0 1px 0 0 #ffffffAA;
+}
+
+.sites li:nth-last-child(1):before {
+  display: none;
+}
+
+.sites li:hover {
+  background-color: #ffffffCC;
+  box-shadow: 0 2px 0 0 #ffffffcc;
+}
+
+.sites li:hover a, .sites li:hover img {
+  filter: brightness(0);
+}
+.sites li:hover {
+  cursor: pointer;
+}
+
+.sites li:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.sites li img{
+  margin-right: 2rem;
+  width: 3.5rem;
+  max-height: 3rem;
+}
+
+.sites li a{
+  width: 20rem;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1480px) {
+  .sites_ctr h1 {
+    font-size: 3vw;
+    text-align: center;
+    margin-left: 2vw;
+  }
+  .header p {
+    font-size: 1.5vw;
+    max-width: 90%;
+    padding: 0;
+    margin-left: 5vw;
+  }
+
+  .sites li:before {
+    width: 100%;
+    left: 0;
+  }
+
+    
+  .sites a {
+    border-left: 5vw solid transparent;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  #vid:not(.mobile) {
+    display: none;
+  }
+
+  #vid.mobile {
+    width: 100%;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size:  cover;
+  }
+
+
+  .container {
+    flex-direction: column;
+  }
+  .logo_ctr {
+    min-height: 100vh;
+  }
+
+  .sites_ctr {
+    clip-path: unset;
+    width: 100%;
+    padding-bottom: 10rem;
+  }
+
+  .sites_ctr .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #logo {
+    max-width: unset;
+    width: 80%;
+  }
+
+  .sites_ctr .header h1{
+    margin: 0;
+    font-size: 2.5rem;
+    max-width: 90%;
+  }
+  .sites_ctr .header p{
+    font-size: 1rem;
+    max-width: 80%;
+  }
+
+  
+  .sites_ctr {
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: 50vw 300px;
+  }
+
+  .sites li {
+    display: flex;
+  }
+
+  
+  .sites a {
+    border-left: 5vw solid transparent;
+  }
+}
