@@ -250,11 +250,14 @@ a {
   }
 
   #vid.mobile {
-    width: 100%;
+    background-image: url("./media/eye.png");
+    width: 100vw;
+    height: 100vh;
     display: block;
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size:  cover;
+
   }
 
   .container {
