@@ -11,7 +11,7 @@ html {
 
 #vid {
   background-color: #222;
-  background-image: url("./media/eyeblur.png");
+  background-image: url("./media/eyeblur.jpg");
   background-position: 0px -31px;
   position: fixed;
   left: 0;
@@ -250,14 +250,20 @@ a {
   }
 
   #vid.mobile {
-    background-image: url("./media/eye.png");
-    width: 100vw;
-    height: 100vh;
+    background-image: url("./media/eye.jpg");
+    top: -10vh;
+    min-height: 110%;
+    width: 100%;
     display: block;
     background-position: center;
     background-repeat: no-repeat;
     background-size:  cover;
+  }
 
+  .dimm {
+    top: -10vh;
+    bottom: unset;
+    min-height: 110%;
   }
 
   .container {
